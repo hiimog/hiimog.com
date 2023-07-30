@@ -1,12 +1,18 @@
-import * as React from 'react';
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-import createEmotionServer from '@emotion/server/create-instance';
-import theme from './theme';
-import createEmotionCache from './createEmotionCache';
-import { EmotionCache } from '@emotion/cache';
+import * as React from "react";
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from "next/document";
+import createEmotionServer from "@emotion/server/create-instance";
+import theme from "./theme";
+import createEmotionCache from "./createEmotionCache";
+import { EmotionCache } from "@emotion/cache";
 
 export interface Props {
-    emotionStyleTags: Array<string>;
+  emotionStyleTags: Array<string>;
 }
 
 export default function MyDocument(props: Props) {
@@ -65,7 +71,9 @@ MyDocument.getInitialProps = async (ctx: DocumentContext) => {
     originalRenderPage({
       enhanceApp: (App) =>
         function EnhanceApp(props) {
-            const Hack = App as any as React.JSXElementConstructor<{emotionCache: EmotionCache}>
+          const Hack = App as any as React.JSXElementConstructor<{
+            emotionCache: EmotionCache;
+          }>;
           return <Hack emotionCache={cache} {...props} />;
         },
     });
@@ -76,7 +84,7 @@ MyDocument.getInitialProps = async (ctx: DocumentContext) => {
   const emotionStyles = extractCriticalToChunks(initialProps.html);
   const emotionStyleTags = emotionStyles.styles.map((style) => (
     <style
-      data-emotion={`${style.key} ${style.ids.join(' ')}`}
+      data-emotion={`${style.key} ${style.ids.join(" ")}`}
       key={style.key}
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: style.css }}
