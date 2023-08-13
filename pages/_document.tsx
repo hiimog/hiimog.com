@@ -7,7 +7,7 @@ import Document, {
   DocumentContext,
 } from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
-import theme from "./theme";
+import theme from "../app/theme";
 import createEmotionCache from "./createEmotionCache";
 import { EmotionCache } from "@emotion/cache";
 
