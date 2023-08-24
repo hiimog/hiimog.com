@@ -1,0 +1,35 @@
+$total-lines: 4;
+$left-offset: 0.7em;
+
+.nav {
+  display: flex;
+  ul {
+    li {
+      //line-height: 4em;
+      display: list-item;
+      font-size: 4em;
+    //   border-bottom: 1px solid white;
+      &:nth-child(1) {
+        font-size: 5em;
+        color: blue;
+      }
+      &:nth-child(odd) {
+        transform: skew(0deg, -36deg) scaleY(1.33333);
+      }
+      &:nth-child(even) {
+        transform: skew(60deg, -30deg) scaleY(0.66667);
+      }
+      &:hover {
+        color: blue;
+        transition: all;
+        transition-duration: .33s;
+      }
+
+      @for $i from 1 through $total-lines + 1 {
+        &:nth-child(#{$i}) {
+          padding-left: $left-offset * $i;
+        }
+      }
+    }
+  }
+}
