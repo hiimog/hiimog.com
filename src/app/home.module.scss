@@ -11,7 +11,6 @@ $left-offset: 0.7em;
     //   border-bottom: 1px solid white;
       &:nth-child(1) {
         font-size: 5em;
-        color: blue;
       }
       &:nth-child(odd) {
         transform: skew(0deg, -36deg) scaleY(1.33333);
@@ -20,7 +19,7 @@ $left-offset: 0.7em;
         transform: skew(60deg, -30deg) scaleY(0.66667);
       }
       &:hover {
-        color: blue;
+        letter-spacing: .2em;
         transition: all;
         transition-duration: .33s;
       }
