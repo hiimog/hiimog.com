@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "schema": "pajv validate -s src/app/blog/compiler/schema.json -d src/app/blog/posts/logging/logging.json"
   },
   "dependencies": {
     "@types/node": "20.5.1",
@@ -17,6 +18,7 @@
     "eslint-config-next": "13.4.19",
     "json5": "^2.2.3",
     "next": "13.4.19",
+    "pajv": "^1.2.0",
     "postcss": "8.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",

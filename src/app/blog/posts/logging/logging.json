@@ -1,0 +1,17 @@
+{
+  "title": "Logging Philosophy",
+  "tags": ["logging", "observability", "reliability"],
+  "summary": "Why do we write logs? What should be logged and in what format? How should we use them? These are some of the questions software engineers need to answer in order to create robust solutions. In this post I provide my thoughts.",
+  "content": [
+    [
+      "We've all written code like this when coding:",
+      {
+        "type": "code",
+        "inline": false,
+        "lang": "py",
+        "content": "if val < threshold: missing = threshold - val log.error(f\"threshold not met: {val}\")"
+      },
+      "This is fine for development and trivial apps, but far too frequently this is the standard for production applications."
+    ]
+  ]
+}

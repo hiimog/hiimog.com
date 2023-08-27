@@ -1,0 +1,48 @@
+{
+  "$id": "https://hiimog.com/blog/post.schema.json",
+  "title": "Blog Post",
+  "description": "The structured format of blog posts.",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "summary": {
+      "type": "string",
+      "description": "A few sentences on why the posts exists."
+    },
+    "content": {
+      "type": "array",
+      "description": "The main content of the post.",
+      "items": { "$ref": "#/$defs/paragraph" }
+    }
+  },
+  "$defs": {
+    "code": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "pattern": "^code$"
+        },
+        "inline": {
+          "type": "boolean",
+          "description": "True if the code is meant to be inline with surrounding text; false if it should appear as its own paragraph."
+        }
+      }
+    },
+    "paragraph": {
+      "type": "array",
+      "items": {
+        "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/code" }]
+      }
+    }
+  }
+}
