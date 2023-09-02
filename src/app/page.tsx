@@ -5,7 +5,7 @@ export default function Home() {
       <nav className={styles.navMain}>
         <h1 className={styles.titleLine}>hi, i'm og</h1>
         <h2 className={styles.aboutLink}><Link href="/about">about</Link></h2>
-        <h2 className={styles.blogLink}><Link href="/blog">blog</Link></h2>
+        <h2 className={styles.postsLink}><Link href="/posts">posts</Link></h2>
         <h2 className={styles.contactLink}><Link href="/contact">contact</Link></h2>
       </nav>
     )
