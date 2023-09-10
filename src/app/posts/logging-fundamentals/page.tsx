@@ -1,5 +1,5 @@
-import styles from "../posts.module.scss";
 import clsx from "clsx";
+import { PostHeading } from "../common";
 export default function LoggingFundamentals() {
   const commonUnstructuredLogFormats = [
     [
@@ -18,9 +18,9 @@ export default function LoggingFundamentals() {
 
   return (
     <div className="container mx-auto">
-      <h1 className={clsx(styles.title, "my-2")}>Logging Fundamentals</h1>
-      <h2 className={styles.title}>Motivation</h2>
-      <p className="my-2">
+      <PostHeading size={1} text="Logging Fundamentals" />
+      <PostHeading size={2} text="Motivation" />
+      <p>
         Writing production-grade software is more than crafting efficient
         algorithms or user-friendly interfaces; it&apos;s also about the ability
         to diagnose and mitigate problems swiftly as they arise. Sometimes your
@@ -32,22 +32,21 @@ export default function LoggingFundamentals() {
         implemented effectively, logs can be the critical difference between a
         catastrophe and a bump in the road.
       </p>
-      <h2 className={styles.title}>Structured vs Unstructured</h2>
-      Logs come in three kinds: unstructured, semi-structured, and structured. 
-      <h3 className={styles.title}>Unstructured</h3>
+      <PostHeading size={2} text="Structured vs Unstructured" />
+      Logs come in three kinds: unstructured, semi-structured, and structured.
+      <PostHeading size={3} text="Unstructured" />
       <p className="my-2">
-        Unstructured logs
-        are what most people are familiar with. They are typically lines of text
-        with some loose pattern where each line represents a distinct entry.
-        Some examples:
-        <ul className="list-disc list-inside my-2">
-          {commonUnstructuredLogFormats.map(([name, ex]) => (
-            <li>
-              {name}: <code className={"text-cyan-500"}>{ex}</code>
-            </li>
-          ))}
-        </ul>
+        Unstructured logs are what most people are familiar with. They are
+        typically lines of text with some loose pattern where each line
+        represents a distinct entry. Some examples:
       </p>
+      <ul className="list-disc list-inside my-2">
+        {commonUnstructuredLogFormats.map(([name, ex]) => (
+          <li>
+            {name}: <code className={"text-cyan-500"}>{ex}</code>
+          </li>
+        ))}
+      </ul>
       <p>
         As you can see, there is a valuable information embedded in these lines.
         To use this encoded enformation: we need to identify the relevant
@@ -55,7 +54,7 @@ export default function LoggingFundamentals() {
         has greater compute costs and can hurt query performance when searching
         over large amounts of logs.
       </p>
-      <h3 className={styles.title}>Structured</h3>
+      <PostHeading size={3} text="Structured" />
       <p>
         Structured logging writes log entries in a form that can be more easily
         processed by machines. The most common format is JSON, and these are
@@ -65,7 +64,10 @@ export default function LoggingFundamentals() {
         </a>
         . This is simply a format where each line is a valid JSON value (most
         commonly an object). Other well known formats are{" "}
-        <a className={"underline"} href="https://protobuf.dev/">Protobufs</a> and XML.
+        <a className={"underline"} href="https://protobuf.dev/">
+          Protobufs
+        </a>{" "}
+        and XML.
       </p>
     </div>
     /*
