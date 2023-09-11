@@ -4,7 +4,7 @@ export default function () {
   const posts = [
     { title: "making a blog", slug: "making-a-blog" },
     { title: "logging fundamentals", slug: "logging-fundamentals" },
-  ].map((p) => (
+  ].map(p => (
     <li>
       <Link href={`/posts/${p.slug}`}>{p.title}</Link>
     </li>

@@ -4,7 +4,7 @@ export default function () {
   const links = [
     { display: "about", href: "/about" },
     { display: "posts", href: "/posts" },
-  ].map((l) => (
+  ].map(l => (
     <li>
       <Link href={l.href}>{l.display}</Link>
     </li>

@@ -13,18 +13,16 @@ brainstorm:
     <>
       <h1>Making A Blog</h1>
       <p>
-        In this post we look at some of the decisions I made when I decided to
-        create a blog and how I went about implementing it.
+        In this post we look at some of the decisions I made when I decided to create a blog and how I
+        went about implementing it.
       </p>
       <>
         <h2>Requirements Analysis</h2>
         <p>
-          This is almost always the first thing I do when I start a project:
-          Determine what <em>must</em> be in the minimal viable product (MVP),
-          what <em>should</em> be in the MVP, and what <em>could</em> be in the
-          MVP. At a high level I knew I wanted something easy, maintainable, and
-          cheap. Here are some of the requirements that came out of
-          brainstorming:
+          This is almost always the first thing I do when I start a project: Determine what{" "}
+          <em>must</em> be in the minimal viable product (MVP), what <em>should</em> be in the MVP, and
+          what <em>could</em> be in the MVP. At a high level I knew I wanted something easy,
+          maintainable, and cheap. Here are some of the requirements that came out of brainstorming:
         </p>
         <h3>Must Haves</h3>
         <ul>
