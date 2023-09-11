@@ -1,3 +1,3 @@
-export default function() {
-    return <h1>Making A Blog</h1>
+export default function () {
+  return <h1>Making A Blog</h1>;
 }
