@@ -8,7 +8,7 @@ export default function () {
 
   return (
     <>
-    <h1>hi, im og</h1>
+    <h1>hi im og</h1>
     <nav>
       <ul>
         {links}
