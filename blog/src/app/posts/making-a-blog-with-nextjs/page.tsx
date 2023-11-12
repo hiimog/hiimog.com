@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function MakingABlogWithNextJs() {
     return (<>
     <h1>Making A Blog With NextJS</h1>
@@ -10,6 +12,7 @@ export default function MakingABlogWithNextJs() {
         <h2>Outline</h2>
         <ul>
             <li>Create GitHub Account</li>
+            <li>Create New Repository</li>
             <li>Install Software</li>
             <li>Create Project Structure</li>
             <li>Add Content</li>
@@ -17,7 +20,11 @@ export default function MakingABlogWithNextJs() {
         </ul>
 
         <section id="create-github-account">
+            TODO
+        </section>
 
+        <section id="create-new-repo">
+            <Image src="/images/posts/making-a-blog-with-nextjs/images/new_button.png" alt="New repo button location" width={100} height={100}/>
         </section>
     </>)
 }
